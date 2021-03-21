@@ -17,14 +17,17 @@ namespace Account1
             Transactions t1 = new Transactions(sender01, receiver01, 250, "Mobile Recharge");
             Transactions t2 = new Transactions(sender01, receiver02, 500, "Bill Pay");
             Transactions t3 = new Transactions(sender01, receiver02, 700, "Recharge Balance");
-
-            sender01.AddTransaction(t1, t2, t3);
-            sender01.showAllTransaction();
+            Transactions t4 = new Transactions(sender01, receiver01, 1110, "Send Money");
+            
+            
+            
+            sender01.addTransaction(t1, t2, t3);
+            sender01.showAllTransactions();
             sender01.ShowInfo();
             sender01.Withdraw(550);
             sender01.Transfer(receiver02, 850);
 
-        
+
         }
     }
 }

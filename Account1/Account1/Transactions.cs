@@ -9,28 +9,38 @@ namespace Account1
     class Transactions
     {
         private Account sender;
+        private Account receiver;
+        internal Account acc;
 
+        public double Amount { get; set; }
+        public string Additional { get; set; }
+        public Account Acc { get; internal set; }
 
-        Account receiver;
-        private int amount;
-        private string additionalInfo;
+        public Transactions() { }
 
-        public Transactions(Account sender01)
+        public Transactions(Account sender, Account receiver, double amount, string additional)
         {
-
+            this.sender = sender;
+            this.receiver = receiver;
+            Additional = additional;
+            Amount = amount;
         }
 
-        public Transactions (int amount,string additionalInfo)
+        public void showAllTransactions()
         {
-            this.amount = amount;
-            this.additionalInfo = additionalInfo;
+            Console.WriteLine("Transaction type: " + Additional);
+            if (Additional.ToLower().Equals("transfer"))
+            {
+                Console.WriteLine("Sender: " + sender);
+                Console.WriteLine("Receiver: " + receiver);
+            }
+            Console.WriteLine("Amount: " + Amount);
         }
 
-        public int Amount 
-        { get; set; }
-
-        public string AdditionalInfo
-        { get; set; }
-
+        public void ShowInfo()
+        {
+            ShowInfo();
+            acc.ShowInfo();
+        }
     }
 }
