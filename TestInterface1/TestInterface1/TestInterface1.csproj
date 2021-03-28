@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CasioBasicCalculator.cs" />
+    <Compile Include="CasioScientificCalculator.cs" />
     <Compile Include="IBasicCalculatorInterface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

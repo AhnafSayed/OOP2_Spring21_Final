@@ -1,5 +1,8 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TestInterface1
 {
@@ -7,59 +10,20 @@ namespace TestInterface1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("_____Calculator Interfaces_____");
+            CasioBasicCalculator b = new CasioBasicCalculator ();
             Console.WriteLine();
-            Console.WriteLine("**********Basic Calculator Interface**********");
-            Console.WriteLine();
-            BasicCalculator b = new BasicCalculator();
-            Console.WriteLine("_____The summation result is_____");
-            b.sum(100, 50);
-            b.printStates();
-
-
-            Console.WriteLine();
-            Console.WriteLine("_____The subtraction result is_____");
+            Console.WriteLine("**********Casio Basic Calculator**********");
+            b.sum(10, 20);
             b.sub(25, 10);
-            b.printStates();
+            b.multiplication(25, 4);
+            b.division(100, 50);
 
-
+            CasioScientificCalculator s = new CasioScientificCalculator();
             Console.WriteLine();
-            Console.WriteLine("_____The multiplication result is_____");
-            b.multiplication(200, 2);
-            b.printStates();
-
-
-            Console.WriteLine();
-            Console.WriteLine("_____The division result is_____");
-            b.division(500, 2);
-            b.printStates();
-
-
-
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("**********Scientific Calculator Interface**********");
-            Console.WriteLine();
-            ScientificCalculator s = new ScientificCalculator();
-            
-            
-            Console.WriteLine();
-            Console.WriteLine("_____The division result is_____");
-            Console.WriteLine();
-            s.division(27, 7);
-
-
-            Console.WriteLine();
-            Console.WriteLine("_____The factorial result is_____");
-            Console.WriteLine();
-            s.factorial(10);
-
-           
-            Console.WriteLine();
-            Console.WriteLine("_____The X to Y result is_____");
-            Console.WriteLine();
-            s.XtoY(300, 700);
-
+            Console.WriteLine("**********Casio Scientific Calculator**********");
+            s.sin_value(526.34f);
+            s.absolute(-500);
+            s.X_Power_Y(4, 2);
         }
     }
 }
