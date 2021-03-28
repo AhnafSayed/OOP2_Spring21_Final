@@ -9,7 +9,6 @@ namespace TestInterface1
     interface IScientificCalculatorInterface
     {
         double X_Power_Y(double x, double y);
-        int absolute(int x);
-        double sin_value(double angle);
+        double sin(double intersection);
     }
 }

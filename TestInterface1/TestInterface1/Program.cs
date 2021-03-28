@@ -21,8 +21,7 @@ namespace TestInterface1
             CasioScientificCalculator s = new CasioScientificCalculator();
             Console.WriteLine();
             Console.WriteLine("**********Casio Scientific Calculator**********");
-            s.sin_value(526.34f);
-            s.absolute(-500);
+            s.sin(526.34f);
             s.X_Power_Y(4, 2);
         }
     }
